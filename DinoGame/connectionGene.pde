@@ -7,7 +7,7 @@ class connectionGene {
   int innovationNo;//each connection is given a innovation number to compare genomes
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //constructor
-  connectionGene(Node from, Node to, float w, int inno) {
+  connectionGene(Node from, Node too, float w, int inno) {
     fromNode = from;
     toNode = to;
     weight = w;
@@ -35,7 +35,7 @@ class connectionGene {
 
   //----------------------------------------------------------------------------------------------------------
   //returns a copy of this connectionGene
-  connectionGene clone(Node from, Node  to) {
+  connectionGene clone(Node from, Node  too) {
     connectionGene clone = new connectionGene(from, to, weight, innovationNo);
     clone.enabled = enabled;
 

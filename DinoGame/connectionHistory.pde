@@ -9,17 +9,17 @@ class connectionHistory {
 
   //---------------------------------------------------------------------------------------------------------------------------------------------------------
   //constructor
-  connectionHistory(int from, int to, int inno, ArrayList<Integer> innovationNos) {
+  connectionHistory(int from, int too, int inno, ArrayList<Integer> innovationNos) {
     fromNode = from;
-    toNode = to;
+    toNode = too;
     innovationNumber = inno;
     innovationNumbers = (ArrayList)innovationNos.clone();
   }
   //---------------------------------------------------------------------------------------------------------------------------------------------------------
   //returns whether the genome matches the original genome and the connection is between the same nodes
-  boolean matches(Genome genome, Node from, Node to) {
+  boolean matches(Genome genome, Node from, Node too) {
     if (genome.genes.size() == innovationNumbers.size()) { //if the number of connections are different then the genoemes aren't the same
-      if (from.number == fromNode && to.number == toNode) {
+      if (from.number == fromNode && too.number == toNode) {
         //next check if all the innovation numbers match from the genome
         for (int i = 0; i< genome.genes.size(); i++) {
           if (!innovationNumbers.contains(genome.genes.get(i).innovationNo)) {
